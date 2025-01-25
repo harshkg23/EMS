@@ -7,6 +7,7 @@ import EmployeeList from './components/EmployeeList.jsx';
 import { EmployeeForm } from './components/EmployeeForm.jsx';
 import Header from './components/Header.jsx';
 import { AddEmployeeForm } from './components/AddEmp.jsx';
+import Landing from '../pages/Landing.jsx';
 
 const App = () => {
   const [employees, setEmployees] = useState([]);
@@ -85,6 +86,12 @@ const App = () => {
       />
       <div className="container">
         <Routes>
+          <Route
+            path="/"
+            element={
+              <Landing/>
+            }
+          />
           <Route
             path="/login"
             element={
