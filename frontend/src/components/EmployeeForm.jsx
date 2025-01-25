@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export function EmployeeForm(employee) {
   const navigate = useNavigate();
-  const { employeeId } = useParams();  // Assuming you're using URL params to get employeeId for editing
+  const { employeeId } = useParams(); 
   const [formData, setFormData] = useState({
     name: '',
     position: '',
@@ -44,8 +44,8 @@ export function EmployeeForm(employee) {
     setError('');
 
     const endpoint = employeeId
-      ? `http://localhost:8000/api/v1/users/update` // PUT request for editing
-      : `http://localhost:8000/api/v1/users/create`; // POST request for creating new employee
+      ? `http://localhost:8000/api/v1/users/update` 
+      : `http://localhost:8000/api/v1/users/create`; 
 
     try {
       const response = await axios({
@@ -55,7 +55,7 @@ export function EmployeeForm(employee) {
       });
 
       if (response.data.success) {
-        navigate('/employees'); // Redirect to employee list after success
+        navigate('/employees'); 
       } else {
         setError('Failed to save employee. Please try again.');
       }

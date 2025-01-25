@@ -32,10 +32,10 @@ export function LoginForm({ onLogin, onSwitchToRegister }) {
 
         toast.success("Login successful!");
 
-        // Notify parent component about successful login
+        
         onLogin({
         email: formData.email,
-        role: loginResponse.data.role // This will now work if 'role' is sent by the backend
+        role: loginResponse.data.role 
         });
 
       } else {

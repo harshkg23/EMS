@@ -37,9 +37,9 @@ export function AddEmployeeForm({ onAddEmployee,  }) {
       formDataToSend.append('avatar', formData.avatar);
     }
 
-    // Retrieve the token from localStorage
+    
     const token = localStorage.getItem('token'); // Or wherever you're storing the token
-    //console.log(token);
+    
     
     
     try {
@@ -71,7 +71,7 @@ export function AddEmployeeForm({ onAddEmployee,  }) {
   };
 
   const onClose = () => {
-    navigate('/employees');  // Navigate to the /employees page
+    navigate('/employees'); 
   };
 
   return (

@@ -8,7 +8,6 @@ const EmployeeCard = ({ employee, userRole }) => {
   const navigate = useNavigate();
 
   const handleEdit = () => {
-    // Dynamically navigate to the edit page with the employee's ID
     navigate(`/employees/edit/${employee.id}`);
   };
 

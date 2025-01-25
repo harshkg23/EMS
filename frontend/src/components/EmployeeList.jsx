@@ -4,8 +4,8 @@ import EmployeeCard from './EmployeeCard';
 
 const EmployeeList = ({ onEdit, userRole }) => {
   const [employees, setEmployees] = useState([]);
-  const [loading, setLoading] = useState(true); // Track loading state
-  const [error, setError] = useState(null); // Track error state
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
   useEffect(() => {
     const fetchEmployees = async () => {
@@ -20,7 +20,7 @@ const EmployeeList = ({ onEdit, userRole }) => {
         setError('Error fetching employees');
         console.error('Error fetching employees:', error);
       } finally {
-        setLoading(false); // Stop loading after the request completes
+        setLoading(false);
       }
     };
 
@@ -28,15 +28,15 @@ const EmployeeList = ({ onEdit, userRole }) => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>; // Show loading text or spinner while fetching data
+    return <div>Loading...</div>; 
   }
 
   if (error) {
-    return <div>{error}</div>; // Show error message if there was a problem fetching the data
+    return <div>{error}</div>;
   }
 
   if (employees.length === 0) {
-    return <div>No employees found</div>; // Show this message if no employees are found
+    return <div>No employees found</div>;
   }
 
   return (
